@@ -16,24 +16,22 @@ Java idiomatic client for [Google Cloud Resource Manager][cloud-resourcemanager]
 Quickstart
 ----------
 
-[//]: # ({x-version-update-start:google-cloud-resourcemanager:released})
 If you are using Maven, add this to your pom.xml file
 ```xml
 <dependency>
   <groupId>com.google.cloud</groupId>
   <artifactId>google-cloud-resourcemanager</artifactId>
-  <version>0.114.0-alpha</version>
+  <version>0.116.0-alpha</version>
 </dependency>
 ```
 If you are using Gradle, add this to your dependencies
 ```Groovy
-compile 'com.google.cloud:google-cloud-resourcemanager:0.114.0-alpha'
+compile 'com.google.cloud:google-cloud-resourcemanager:0.116.0-alpha'
 ```
 If you are using SBT, add this to your dependencies
 ```Scala
-libraryDependencies += "com.google.cloud" % "google-cloud-resourcemanager" % "0.114.0-alpha"
+libraryDependencies += "com.google.cloud" % "google-cloud-resourcemanager" % "0.116.0-alpha"
 ```
-[//]: # ({x-version-update-end})
 
 Example Application
 --------------------

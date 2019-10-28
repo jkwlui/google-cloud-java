@@ -16,24 +16,22 @@ Java idiomatic client for [Cloud Web Risk][product-overview].
 Quickstart
 ----------
 
-[//]: # ({x-version-update-start:google-cloud-webrisk:released})
 If you are using Maven, add this to your pom.xml file
 ```xml
 <dependency>
   <groupId>com.google.cloud</groupId>
   <artifactId>google-cloud-webrisk</artifactId>
-  <version>0.29.0-alpha</version>
+  <version>0.30.0-alpha</version>
 </dependency>
 ```
 If you are using Gradle, add this to your dependencies
 ```Groovy
-compile 'com.google.cloud:google-cloud-webrisk:0.29.0-alpha'
+compile 'com.google.cloud:google-cloud-webrisk:0.30.0-alpha'
 ```
 If you are using SBT, add this to your dependencies
 ```Scala
-libraryDependencies += "com.google.cloud" % "google-cloud-webrisk" % "0.29.0-alpha"
+libraryDependencies += "com.google.cloud" % "google-cloud-webrisk" % "0.30.0-alpha"
 ```
-[//]: # ({x-version-update-end})
 
 Authentication
 --------------

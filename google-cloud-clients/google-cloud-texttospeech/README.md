@@ -16,24 +16,22 @@ Java idiomatic client for [Cloud Text-to-Speech][cloud-texttospeech].
 Quickstart
 ----------
 
-[//]: # ({x-version-update-start:google-cloud-texttospeech:released})
 If you are using Maven, add this to your pom.xml file
 ```xml
 <dependency>
   <groupId>com.google.cloud</groupId>
   <artifactId>google-cloud-texttospeech</artifactId>
-  <version>0.114.0-beta</version>
+  <version>0.116.0-beta</version>
 </dependency>
 ```
 If you are using Gradle, add this to your dependencies
 ```Groovy
-compile 'com.google.cloud:google-cloud-texttospeech:0.114.0-beta'
+compile 'com.google.cloud:google-cloud-texttospeech:0.116.0-beta'
 ```
 If you are using SBT, add this to your dependencies
 ```Scala
-libraryDependencies += "com.google.cloud" % "google-cloud-texttospeech" % "0.114.0-beta"
+libraryDependencies += "com.google.cloud" % "google-cloud-texttospeech" % "0.116.0-beta"
 ```
-[//]: # ({x-version-update-end})
 
 Authentication
 --------------

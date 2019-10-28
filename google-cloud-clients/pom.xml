@@ -4,7 +4,7 @@
   <groupId>com.google.cloud</groupId>
   <artifactId>google-cloud-clients</artifactId>
   <packaging>pom</packaging>
-  <version>0.114.1-alpha-SNAPSHOT</version><!-- {x-version-update:google-cloud-clients:current} -->
+  <version>0.116.1-alpha-SNAPSHOT</version><!-- {x-version-update:google-cloud-clients:current} -->
   <name>Google Cloud</name>
   <url>https://github.com/googleapis/google-cloud-java/tree/master/google-cloud-clients</url>
   <description>
@@ -153,17 +153,17 @@
     <project.javadoc.protobufBaseURL>https://googleapis.dev/java/google-api-grpc/latest</project.javadoc.protobufBaseURL>
     <github.global.server>github</github.global.server>
     <site.installationModule>google-cloud-clients</site.installationModule>
-    <bom.version>0.114.1-alpha-SNAPSHOT</bom.version><!-- {x-version-update:google-cloud-bom:current} -->
+    <bom.version>0.116.1-alpha-SNAPSHOT</bom.version><!-- {x-version-update:google-cloud-bom:current} -->
     <api-client.version>1.30.4</api-client.version>
     <!-- make sure to keep gax version in sync with google-cloud-bom -->
-    <gax.version>1.49.0</gax.version>
+    <gax.version>1.49.1</gax.version>
     <api.common.java.version>1.8.1</api.common.java.version>
-    <grpc.version>1.24.0</grpc.version>
+    <grpc.version>1.24.1</grpc.version>
     <google.auth.version>0.18.0</google.auth.version>
     <!-- We are currently using the *-android version to support JDK7. -->
     <guava.version>28.1-android</guava.version>
     <http-client-bom.version>1.32.1</http-client-bom.version>
-    <oauth-client.version>1.30.3</oauth-client.version>
+    <oauth-client.version>1.30.4</oauth-client.version>
     <protobuf.version>3.10.0</protobuf.version>
     <!-- make sure to keep opencensus version in sync with grpc -->
     <!-- make sure to update the opencensus version in google-cloud-clients/google-cloud-bigtable/README -->
@@ -380,7 +380,7 @@
       <dependency>
         <groupId>com.google.cloud</groupId>
         <artifactId>google-cloud-conformance-tests</artifactId>
-        <version>0.1.0-SNAPSHOT</version>
+        <version>0.0.1</version>
         <scope>test</scope>
       </dependency>
     </dependencies>

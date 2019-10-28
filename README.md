@@ -76,7 +76,7 @@ If you are using Maven, add this to your pom.xml file
       <dependency>
         <groupId>com.google.cloud</groupId>
         <artifactId>google-cloud-bom</artifactId>
-        <version>0.114.0-alpha</version>
+        <version>0.116.0-alpha</version>
         <type>pom</type>
         <scope>import</scope>
        </dependency>
@@ -95,11 +95,11 @@ If you are using Maven, add this to your pom.xml file
 [//]: # ({x-version-update-start:google-cloud-storage:released})
 If you are using Gradle, add this to your dependencies
 ```Groovy
-compile 'com.google.cloud:google-cloud-storage:1.96.0'
+compile 'com.google.cloud:google-cloud-storage:1.98.0'
 ```
 If you are using SBT, add this to your dependencies
 ```Scala
-libraryDependencies += "com.google.cloud" % "google-cloud-storage" % "1.96.0"
+libraryDependencies += "com.google.cloud" % "google-cloud-storage" % "1.98.0"
 ```
 [//]: # ({x-version-update-end})
 
@@ -120,7 +120,7 @@ If you are running into problems with version conflicts, the easiest way to solv
       <dependency>
         <groupId>com.google.cloud</groupId>
         <artifactId>google-cloud-bom</artifactId>
-        <version>0.114.0-alpha</version>
+        <version>0.116.0-alpha</version>
         <type>pom</type>
         <scope>import</scope>
       </dependency>
@@ -293,7 +293,7 @@ See [TESTING] to read more about using our testing helpers.
 Versioning
 ----------
 
-This library follows [Semantic Versioning](http://semver.org/), but with some
+This library follows [Semantic Versioning](http://semver.org/), with some
 additional qualifications:
 
 1. Components marked with `@BetaApi` are considered to be "0.x" features inside
@@ -310,8 +310,8 @@ additional qualifications:
    with each other. For this reason, gax-java should not be used
    independently of google-cloud-java.
 
-1. Components marked with `@InternalApi` are technically public, but are only
-   public for technical reasons, because of the limitations of Java's access
+1. Components marked with `@InternalApi` are technically public, but only
+   because of the limitations of Java's access
    modifiers. For the purposes of semver, they should be considered private.
 
 Please note it is currently under active development. Any release versioned 0.x.y is
