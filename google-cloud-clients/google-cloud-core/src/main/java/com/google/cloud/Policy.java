@@ -323,13 +323,8 @@ public final class Policy implements Serializable {
    * */
 
   public Map<Role, Set<Identity>> getBindings() {
-    checkArgument(this.version != 3, "removeRole is not supported with version 3 policies.");
-    // Convert to V1 IAM Policy if version is not 3.
-    ImmutableMap.Builder<Role, Set<Identity>> bindingsV1Builder = ImmutableMap.builder();
-    for (Binding binding : bindingsV3) {
-      bindingsV1Builder.put(binding.getRole(), binding.getIdentities());
-    }
-    return bindingsV1Builder.build();
+    checkArgument(this.version != 3, "getBindings() is not supported for a Policy with version greater than 1.");
+    return new BindingsMap(this.bindingsV3);
   }
 
   /** Returns the map of bindings that comprises the policy for version 3. */

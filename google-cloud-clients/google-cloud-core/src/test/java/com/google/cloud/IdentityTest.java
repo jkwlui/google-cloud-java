@@ -16,10 +16,15 @@
 
 package com.google.cloud;
 
+import org.junit.Test;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;
-
-import org.junit.Test;
 
 public class IdentityTest {
 
@@ -157,5 +162,17 @@ public class IdentityTest {
     assertEquals(expected, actual);
     assertEquals(expected.getType(), actual.getType());
     assertEquals(expected.getValue(), actual.getValue());
+  }
+
+  @Test
+  public void testBindingSet() {
+    List<Binding> bindings = new ArrayList<Binding>();
+    bindings.add(Binding.newBuilder().setRole(Role.of("first")).addIdentity(Identity.allAuthenticatedUsers()).build());
+    bindings.add(Binding.newBuilder().setRole(Role.of("second")).addIdentity(Identity.allUsers()).build());
+    Map<Role, Set<Identity>> map = new BindingsMap(bindings);
+
+    System.out.println(map.get(Role.of("first")));
+    bindings.set(0, Binding.newBuilder().setRole(Role.of("first")).addIdentity(Identity.user("me@google.com")).build());
+    System.out.println(map.get(Role.of("first")));
   }
 }
