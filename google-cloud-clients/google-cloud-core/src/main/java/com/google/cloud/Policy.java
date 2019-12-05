@@ -16,19 +16,16 @@
 
 package com.google.cloud;
 
-import static com.google.common.base.Preconditions.checkArgument;
-import static com.google.common.base.Preconditions.checkNotNull;
-
 import com.google.api.core.ApiFunction;
 import com.google.api.core.InternalApi;
 import com.google.common.base.Function;
 import com.google.common.base.MoreObjects;
 import com.google.common.collect.ImmutableList;
-import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.ImmutableSet;
 import com.google.common.collect.Lists;
 import com.google.common.io.BaseEncoding;
 import com.google.protobuf.ByteString;
+
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -37,6 +34,9 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Set;
+
+import static com.google.common.base.Preconditions.checkArgument;
+import static com.google.common.base.Preconditions.checkNotNull;
 
 /**
  * Class for Identity and Access Management (IAM) policies. IAM policies are used to specify access
@@ -317,11 +317,18 @@ public final class Policy implements Serializable {
     return new Builder(this);
   }
 
-  /** Returns the map of bindings that comprises the policy.
+  /**
+   * Returns an immutable view of this policy's bindings as a Map.
+   *
+   * Do not use getBindings() and getBindingsV3() together as it might
+   * lead to corruption of the policy.
+   *
+   * @deprecated This method is for maintaining backwards compatibility with
+   *   existing user integrations on version 1 policies.
    *
    * @throws IllegalArgumentException if policy version is equal to 3.
    * */
-
+  @Deprecated
   public Map<Role, Set<Identity>> getBindings() {
     checkArgument(this.version != 3, "getBindings() is not supported for a Policy with version greater than 1.");
     return new BindingsMap(this.bindingsV3);
